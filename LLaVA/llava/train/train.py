@@ -29,7 +29,7 @@ import tokenizers
 
 from llava.constants import IGNORE_INDEX, IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN
 from torch.utils.data import Dataset
-from llava.train.llava_trainer import LLaVATrainer
+from llava_trainer import LLaVATrainer
 
 from llava import conversation as conversation_lib
 from llava.model import *
@@ -180,6 +180,20 @@ def find_all_linear_names(model):
     if 'lm_head' in lora_module_names: # needed for 16-bit
         lora_module_names.remove('lm_head')
     return list(lora_module_names)
+
+
+def find_all_linear_names_stage1(model):
+    cls = torch.nn.Linear
+    include_module_names = []
+    exclude_keywords = 'mm_projector'
+    for name, module in model.named_modules():
+        if exclude_keywords not in name:
+            continue
+        else:
+            if isinstance(module, cls):
+                include_module_names.append(name)
+
+    return include_module_names
 
 
 def safe_save_model_for_hf_trainer(trainer: transformers.Trainer,
@@ -862,7 +876,7 @@ def train(attn_implementation=None):
         lora_config = LoraConfig(
             r=training_args.lora_r,
             lora_alpha=training_args.lora_alpha,
-            target_modules=find_all_linear_names(model),
+            target_modules=find_all_linear_names_stage1(model)[:],
             lora_dropout=training_args.lora_dropout,
             bias=training_args.lora_bias,
             task_type="CAUSAL_LM",
@@ -955,6 +969,10 @@ def train(attn_implementation=None):
                 if hasattr(module, 'weight'):
                     if training_args.bf16 and module.weight.dtype == torch.float32:
                         module = module.to(torch.bfloat16)
+    
+    for name, param in model.named_parameters():
+        if 'lora' not in name:
+            param.requires_grad = False
 
     data_module = make_supervised_data_module(tokenizer=tokenizer,
                                               data_args=data_args)
@@ -962,6 +980,10 @@ def train(attn_implementation=None):
                     tokenizer=tokenizer,
                     args=training_args,
                     **data_module)
+
+    for name, param in model.named_parameters():
+        if param.requires_grad == True:
+            print(name)
 
     if list(pathlib.Path(training_args.output_dir).glob("checkpoint-*")):
         trainer.train(resume_from_checkpoint=True)

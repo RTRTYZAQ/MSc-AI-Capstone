@@ -1,0 +1,32 @@
+  0%|                                                                                       | 0/918 [00:00<?, ?it/s]/root/anaconda3/envs/Mixture-of-Debater/lib/python3.10/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/root/anaconda3/envs/Mixture-of-Debater/lib/python3.10/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+Traceback (most recent call last):
+  File "/workspace/algorithm/Capstone/MSc-AI-Capstone/LLaVA/llava/train/train_mem.py", line 4, in <module>
+    train(attn_implementation="flash_attention_2")
+  File "/workspace/algorithm/Capstone/MSc-AI-Capstone/LLaVA/llava/train/train.py", line 987, in train
+    trainer.train()
+  File "/root/anaconda3/envs/Mixture-of-Debater/lib/python3.10/site-packages/transformers/trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "/root/anaconda3/envs/Mixture-of-Debater/lib/python3.10/site-packages/transformers/trainer.py", line 1869, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/workspace/algorithm/Mixture-of-Debater/LLaVA/llava/train/llava_trainer.py", line 181, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/workspace/algorithm/Mixture-of-Debater/LLaVA/llava/train/llava_trainer.py", line 155, in compute_loss
+    if self.args.auxiliary_loss:
+AttributeError: 'TrainingArguments' object has no attribute 'auxiliary_loss'
+Traceback (most recent call last):
+  File "/workspace/algorithm/Capstone/MSc-AI-Capstone/LLaVA/llava/train/train_mem.py", line 4, in <module>
+    train(attn_implementation="flash_attention_2")
+  File "/workspace/algorithm/Capstone/MSc-AI-Capstone/LLaVA/llava/train/train.py", line 987, in train
+    trainer.train()
+  File "/root/anaconda3/envs/Mixture-of-Debater/lib/python3.10/site-packages/transformers/trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "/root/anaconda3/envs/Mixture-of-Debater/lib/python3.10/site-packages/transformers/trainer.py", line 1869, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/workspace/algorithm/Mixture-of-Debater/LLaVA/llava/train/llava_trainer.py", line 181, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/workspace/algorithm/Mixture-of-Debater/LLaVA/llava/train/llava_trainer.py", line 155, in compute_loss
+    if self.args.auxiliary_loss:
+AttributeError: 'TrainingArguments' object has no attribute 'auxiliary_loss'
