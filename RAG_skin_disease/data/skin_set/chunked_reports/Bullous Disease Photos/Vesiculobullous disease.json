@@ -1,0 +1,35 @@
+{
+  "metainfo": {
+    "sha1_name": "Vesiculobullous disease",
+    "pages_amount": 1,
+    "text_blocks_amount": 26,
+    "tables_amount": 1,
+    "pictures_amount": 2,
+    "equations_amount": 0,
+    "footnotes_amount": 0
+  },
+  "content": {
+    "chunks": [
+      {
+        "page": 1,
+        "length_tokens": 294,
+        "text": "# Vesiculobullous disease\n\n\nA vesiculobullous  disease is  a  type  of  mucocutaneous disease characterized by vesicles and bullae (i.e. blisters). Both vesicles and bullae are fluid-filled lesions, and they are distinguished  by  size  (vesicles  being  less  than  5-10  mm  and bulla  being  larger  than  5-10  mm,  depending  upon  which definition is used). In the case of vesiculobullous diseases which are also  immune  disorders,  the  term immunobullous [1] is sometimes used. Examples of vesiculobullous diseases include:\n- Infectious: (viral)\n- Herpes simplex\n- Varicella-Zoster infection\n- Hand, foot and mouth disease\n- Herpangina\n- Measles (Rubeola)\n- Immunobullous:\n- Pemphigus vulgaris [2]\n- Pemphigoid\n- Dermatitis herpetiformis[1] (https://books.google.com/books?id=N0ng2f1hxn4C&dq=Dermatitis+ herpetiformis+is+a+vesiculobullous+disease&pg=PA161)\n- Linear immunoglobulin-A disease (linear IgA disease)\n- Genetic:\n- Epidermolysis bullosa [3]",
+        "id": 0,
+        "type": "content"
+      },
+      {
+        "page": 1,
+        "length_tokens": 73,
+        "text": "Some features are as follows:\n| Name                     | Acantholysis?   | Ig         |\n|--------------------------|-----------------|------------|\n| epidermolysis bullosa    | yes             | mostly IgG |\n| bullous pemphigoid       | no              | mostly IgG |\n| dermatitis herpetiformis | no              | IgA        |",
+        "id": 1,
+        "type": "content"
+      }
+    ],
+    "pages": [
+      {
+        "page": 1,
+        "text": "# Vesiculobullous disease\n\n\nA vesiculobullous  disease is  a  type  of  mucocutaneous disease characterized by vesicles and bullae (i.e. blisters). Both vesicles and bullae are fluid-filled lesions, and they are distinguished  by  size  (vesicles  being  less  than  5-10  mm  and bulla  being  larger  than  5-10  mm,  depending  upon  which definition is used). In the case of vesiculobullous diseases which are also  immune  disorders,  the  term immunobullous [1] is sometimes used. Examples of vesiculobullous diseases include:\n- Infectious: (viral)\n- Herpes simplex\n- Varicella-Zoster infection\n- Hand, foot and mouth disease\n- Herpangina\n- Measles (Rubeola)\n- Immunobullous:\n- Pemphigus vulgaris [2]\n- Pemphigoid\n- Dermatitis herpetiformis[1] (https://books.google.com/books?id=N0ng2f1hxn4C&dq=Dermatitis+ herpetiformis+is+a+vesiculobullous+disease&pg=PA161)\n- Linear immunoglobulin-A disease (linear IgA disease)\n- Genetic:\n- Epidermolysis bullosa [3]\n\n\n\nSome features are as follows:\n| Name                     | Acantholysis?   | Ig         |\n|--------------------------|-----------------|------------|\n| epidermolysis bullosa    | yes             | mostly IgG |\n| bullous pemphigoid       | no              | mostly IgG |\n| dermatitis herpetiformis | no              | IgA        |"
+      }
+    ]
+  }
+}

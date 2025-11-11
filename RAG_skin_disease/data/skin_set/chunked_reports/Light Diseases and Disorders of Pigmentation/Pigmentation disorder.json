@@ -1,0 +1,42 @@
+{
+  "metainfo": {
+    "sha1_name": "Pigmentation disorder",
+    "pages_amount": 1,
+    "text_blocks_amount": 17,
+    "tables_amount": 0,
+    "pictures_amount": 1,
+    "equations_amount": 0,
+    "footnotes_amount": 0
+  },
+  "content": {
+    "chunks": [
+      {
+        "page": 1,
+        "length_tokens": 264,
+        "text": "# Pigmentation disorder\n\nPigmentation  disorders are  disturbances  of  human  skin color. [1]  There may be a loss or reduction, which may be related to loss of melanocytes or the inability of melanocytes to produce melanin or transport melanosomes correctly. [1]\n\n\n## Pigmentation disorder\n\nSpecialty\n\nDermatology\n\nMost pigmentation disorders involve the underproduction or overproduction of melanin. [2][3]\n\n\n## Causes\n\nSkin pigmentation is a frequent disorder that has a number of potential causes. Genetics, sun exposure, and some drugs are the three main factors that contribute to skin pigmentation. [4]\n\nThe  most  frequent  cause  of  low  melanin  concentration  (hypopigmentation)  is  prior  skin  trauma,  which includes skin lesions including blisters, burns, infections, exposure to chemicals, and other wounds. The skin will appear paler than the surrounding skin surface once an injury has healed. [4]\n\nDifferent areas of the skin may be hypopigmented as a result of other genetic illnesses. Hypopigmentation can be caused by hereditary conditions such as vitiligo, melasma, pityriasis versicolor, pityriasis alba, albinism, and fungal infections. [4]",
+        "id": 0,
+        "type": "content"
+      },
+      {
+        "page": 1,
+        "length_tokens": 234,
+        "text": "Hyperpigmentation  results  from  an  increase  in  melanin  synthesis,  which  is  mostly  brought  on  by  sun exposure, dermatological disorders, hormones, aging, genetic factors, skin injuries or inflammation, and acne. Sun exposure, which greatly increases the synthesis of melanin, is the most common  cause of hyperpigmentation. [4]\n\n\n## Mechanism\n\nGenetics is one of the most common causes of skin color. Skin cells called melanocytes are responsible for producing  melanin.  The  number  of  melanocytes  that  each  person  will  have  may  be  predicted  by  genetics. Melanosomes,  which  are  organelles  containing melanin, must  be  transported  and  increased  during hyperpigmentation and tanning, while they shrink during hypopigmentation. [4]\n\nSkin pigmentation is frequently caused by sun exposure. To protect itself against UV radiation from the sun, the body makes more melanin. As a result, the skin may become more pigmented to protect it from the sun's rays. [4]",
+        "id": 1,
+        "type": "content"
+      },
+      {
+        "page": 1,
+        "length_tokens": 122,
+        "text": "Skin pigmentation is frequently caused by sun exposure. To protect itself against UV radiation from the sun, the body makes more melanin. As a result, the skin may become more pigmented to protect it from the sun's rays. [4]\n\nThe pigmentation of the skin may also be lightened by certain drugs. Antibiotics are one type of medications that  can  increase  the  synthesis  of  melanin,  which  darkens  skin.  Skin  pigmentation  may  also  become  more intense when certain drugs, such birth control pills, are taken concurrently. [4]",
+        "id": 2,
+        "type": "content"
+      }
+    ],
+    "pages": [
+      {
+        "page": 1,
+        "text": "# Pigmentation disorder\n\nPigmentation  disorders are  disturbances  of  human  skin color. [1]  There may be a loss or reduction, which may be related to loss of melanocytes or the inability of melanocytes to produce melanin or transport melanosomes correctly. [1]\n\n\n## Pigmentation disorder\n\nSpecialty\n\nDermatology\n\nMost pigmentation disorders involve the underproduction or overproduction of melanin. [2][3]\n\n\n## Causes\n\nSkin pigmentation is a frequent disorder that has a number of potential causes. Genetics, sun exposure, and some drugs are the three main factors that contribute to skin pigmentation. [4]\n\nThe  most  frequent  cause  of  low  melanin  concentration  (hypopigmentation)  is  prior  skin  trauma,  which includes skin lesions including blisters, burns, infections, exposure to chemicals, and other wounds. The skin will appear paler than the surrounding skin surface once an injury has healed. [4]\n\nDifferent areas of the skin may be hypopigmented as a result of other genetic illnesses. Hypopigmentation can be caused by hereditary conditions such as vitiligo, melasma, pityriasis versicolor, pityriasis alba, albinism, and fungal infections. [4]\n\nHyperpigmentation  results  from  an  increase  in  melanin  synthesis,  which  is  mostly  brought  on  by  sun exposure, dermatological disorders, hormones, aging, genetic factors, skin injuries or inflammation, and acne. Sun exposure, which greatly increases the synthesis of melanin, is the most common  cause of hyperpigmentation. [4]\n\n\n## Mechanism\n\nGenetics is one of the most common causes of skin color. Skin cells called melanocytes are responsible for producing  melanin.  The  number  of  melanocytes  that  each  person  will  have  may  be  predicted  by  genetics. Melanosomes,  which  are  organelles  containing melanin, must  be  transported  and  increased  during hyperpigmentation and tanning, while they shrink during hypopigmentation. [4]\n\nSkin pigmentation is frequently caused by sun exposure. To protect itself against UV radiation from the sun, the body makes more melanin. As a result, the skin may become more pigmented to protect it from the sun's rays. [4]\n\nThe pigmentation of the skin may also be lightened by certain drugs. Antibiotics are one type of medications that  can  increase  the  synthesis  of  melanin,  which  darkens  skin.  Skin  pigmentation  may  also  become  more intense when certain drugs, such birth control pills, are taken concurrently. [4]"
+      }
+    ]
+  }
+}

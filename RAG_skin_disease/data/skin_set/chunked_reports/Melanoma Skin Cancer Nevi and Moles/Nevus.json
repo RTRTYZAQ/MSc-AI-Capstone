@@ -1,0 +1,93 @@
+{
+  "metainfo": {
+    "sha1_name": "Nevus",
+    "pages_amount": 5,
+    "text_blocks_amount": 150,
+    "tables_amount": 0,
+    "pictures_amount": 22,
+    "equations_amount": 0,
+    "footnotes_amount": 0
+  },
+  "content": {
+    "chunks": [
+      {
+        "page": 1,
+        "length_tokens": 241,
+        "text": "# Nevus\n\nNevus (pl. nevi )  is  a  nonspecific  medical  term  for  a  visible, circumscribed, chronic lesion of the skin or mucosa. [1]  The term originates from naevus , which is Latin for \"birthmark\"; however, a nevus can be either congenital (present at birth) or acquired. Common terms ( mole , birthmark , beauty mark , etc.) are  used  to  describe  nevi,  but  these  terms  do  not  distinguish specific types of nevi from one another.\n\n\n## Classification\n\nThe term nevus is applied to a number of conditions caused by neoplasias  and  hyperplasias  of  melanocytes, [2]   as  well  as  a number of pigmentation disorders, both hypermelanotic (containing increased melanin, the pigment responsible for skin color)  and  hypomelanotic  (containing  decreased  melanin). [3] Suspicious skin moles which are multi-colored or pink may be a finding in skin cancer. [4]\n\n\n## Increased melanin\n\n\n## Usually acquired",
+        "id": 0,
+        "type": "content"
+      },
+      {
+        "page": 1,
+        "length_tokens": 223,
+        "text": "## Increased melanin\n\n\n## Usually acquired\n\n\n- Melanocytic nevus\n- Melanocytic nevi can be categorized based on the location of melanocytic cells [2]\n- Junctional: epidermis\n- Intradermal: dermis\n- Compound: epidermis and dermis\n- Atypical (dysplastic) nevus: This type of nevus must be diagnosed based on histological features. Clinically, atypical nevi are characterized by variable pigmentation and irregular borders. [5]\n- Becker's nevus\n- Blue nevus (rarely congenital): A classic blue nevus is usually smaller than 1 cm, flat, and blue-black in color. [ 6 ]\n- Hori's nevus\n- Nevus spilus (speckled lentiginous nevus): This lesion includes dark speckles within a tan-brown background. [7]\n- Pigmented spindle cell nevus\n- Spitz nevus\n- Zosteriform lentiginous nevus\n\n\n\n## Usually congenital\n\n\n- Congenital melanocytic nevus",
+        "id": 1,
+        "type": "content"
+      },
+      {
+        "page": 2,
+        "length_tokens": 163,
+        "text": "- These nevi are often categorized based on size, however, the lesions usually grow in proportion to the body over time, so the category may change over an individual's life. [2]  This categorization is important because large congenital melanocytic nevi are associated with an increased risk of melanoma, a serious type of skin cancer. [2]\n- Nevus of Ito\n- Nevus of Ota\n\n\nConjunctival nevus of a  32 -year-old male\n\nBecker's nevus\n\nMicrograph of an intradermal melanocytic nevus\n\nNevus of Ota\n\n\n## Decreased melanin\n\n\n## Acquired\n\n\n- Nevus anemicus\n\n\nAcquired melanocytic nevi\n\nNevus spilus\n\nCompound nevus, left buttock",
+        "id": 2,
+        "type": "content"
+      },
+      {
+        "page": 3,
+        "length_tokens": 247,
+        "text": "# Congenital\n\n\n- Nevus depigmentosus\n\n\nNevus depigmentosus\n\nAdditional  types  of  nevi  do  not  involve  disorders  of  pigmentation  or  melanocytes.  These  additional  nevi represent hamartomatous proliferations of the epithelium, [8] connective tissue, [9] and vascular malformations. [10]\n\n\n## Epidermal nevi\n\nThese nevi represent excess growth of specific cells types found in the skin, including those that make up oil and sweat glands. [8]\n\n\n- Verrucous epidermal nevus\n- Nevus sebaceous\n- Nevus comedonicus\n- Eccrine nevus\n- Apocrine nevus\n\n\n\n## Connective tissue nevi\n\nConnective tissue nevi represent abnormalities of collagen in the dermis, the deep layer of the skin. [9]\n\n\n- Collagenoma\n- Elastoma\n\n\n\n## Vascular nevi\n\nThese nevi represent excess growth of blood vessels, including capillaries. [11]\n\n\n- Nevus simplex (nevus flammeus nuchae), also known as a stork bite or salmon patch.",
+        "id": 3,
+        "type": "content"
+      },
+      {
+        "page": 4,
+        "length_tokens": 104,
+        "text": "# Intramucosal nevi\n\nAn intramucosal nevus is a nevus within the mucosa as found in for example the mouth and genital areas. In the  mouth,  they  are  found  most  frequently  on  the  hard  palate.  They  are  typically  light  brown  and  domeshaped. [12]  Intramucosal nevi account for 64% of all reported case of oral nevi. [13]\n\n\n## Diagnosis",
+        "id": 4,
+        "type": "content"
+      },
+      {
+        "page": 4,
+        "length_tokens": 242,
+        "text": "## Diagnosis\n\nNevi  are  typically  diagnosed  clinically  with  the  naked  eye  or  using dermatoscopy. More advanced imaging tests are available for distinguishing melanocytic nevi from melanoma, including computerized dermoscopy and image analysis. [14]  The management of nevi  depends  on  the  type  of  nevus  and  the  degree  of  diagnostic uncertainty.  Some nevi are known to be benign, and may simply be monitored over time. Others may warrant more thorough examination and biopsy for histopathological examination (looking at a sample of skin  under  a  microscope  to  detect  unique  cellular  features).  For example,  a  clinician  may  want  to  determine  whether  a  pigmented nevus is a type of melanocytic nevus, dysplastic nevus, or melanoma as some of these skin lesions pose a risk for malignancy. The ABCDE criteria (asymmetry, border irregularity, color variegation, diameter > 6  mm,  and  evolution)  are  often  used  to  distinguish  nevi  from",
+        "id": 5,
+        "type": "content"
+      },
+      {
+        "page": 4,
+        "length_tokens": 196,
+        "text": "melanomas in adults, while modified criteria (amelanosis, bleeding or bumps, uniform color, small diameter or  de  novo,  and  evolution)  can  be  used  when  evaluating  suspicious  lesions  in  children. [15]   In  addition  to histopathological examination, some lesions may also warrant additional tests to aid in diagnosis, including special  stains,  immunohistochemistry,  and  electron  microscopy. [16]   Typically,  the  nevi  that  exist  since childhood are harmless.\n\nA dermatoscope\n\n\n## Differential diagnoses\n\nHypermelanotic nevi must be differentiated from other types of pigmented skin lesions, including: [6][7]\n\n\n- Lentigo simplex\n- Solar lentigo\n- Café au lait macule\n- Ink-spot lentigo\n- Mucosal melanotic macule\n- Mongolian spot (dermal melanocytosis)",
+        "id": 6,
+        "type": "content"
+      },
+      {
+        "page": 5,
+        "length_tokens": 193,
+        "text": "# Management\n\nThe  management  of  a  nevus  depends  on  the  specific  diagnosis, however,  the  options  for  treatment  generally  include  the  following modalities:\n\n\n## Observation\n\n\n## Destruction\n\n\n- Chemical peels\n- Cryotherapy\n- Dermabrasion\n- Electrodessication\n- Laser ablation\n\n\n\n## Surgery\n\nThe decision to observe or treat a nevus may depend on a number of factors, including cosmetic concerns, irritative symptoms (e.g., pruritus), ulceration, infection, and concern for potential malignancy. [2]\n\n\n## Syndromes\n\n\nThe term nevus is included in the names of multiple dermatologic syndromes:\n- Basal cell nevus syndrome\n- Blue rubber bleb nevus syndrome\n- Dysplastic nevus syndrome\n- Epidermal nevus syndrome\n- Linear nevus sebaceous syndrome\n\n\n\n## See also\n\n\n- Skin lesion",
+        "id": 7,
+        "type": "content"
+      }
+    ],
+    "pages": [
+      {
+        "page": 1,
+        "text": "# Nevus\n\nNevus (pl. nevi )  is  a  nonspecific  medical  term  for  a  visible, circumscribed, chronic lesion of the skin or mucosa. [1]  The term originates from naevus , which is Latin for \"birthmark\"; however, a nevus can be either congenital (present at birth) or acquired. Common terms ( mole , birthmark , beauty mark , etc.) are  used  to  describe  nevi,  but  these  terms  do  not  distinguish specific types of nevi from one another.\n\n\n## Classification\n\nThe term nevus is applied to a number of conditions caused by neoplasias  and  hyperplasias  of  melanocytes, [2]   as  well  as  a number of pigmentation disorders, both hypermelanotic (containing increased melanin, the pigment responsible for skin color)  and  hypomelanotic  (containing  decreased  melanin). [3] Suspicious skin moles which are multi-colored or pink may be a finding in skin cancer. [4]\n\n\n## Increased melanin\n\n\n## Usually acquired\n\n\n- Melanocytic nevus\n- Melanocytic nevi can be categorized based on the location of melanocytic cells [2]\n- Junctional: epidermis\n- Intradermal: dermis\n- Compound: epidermis and dermis\n- Atypical (dysplastic) nevus: This type of nevus must be diagnosed based on histological features. Clinically, atypical nevi are characterized by variable pigmentation and irregular borders. [5]\n- Becker's nevus\n- Blue nevus (rarely congenital): A classic blue nevus is usually smaller than 1 cm, flat, and blue-black in color. [ 6 ]\n- Hori's nevus\n- Nevus spilus (speckled lentiginous nevus): This lesion includes dark speckles within a tan-brown background. [7]\n- Pigmented spindle cell nevus\n- Spitz nevus\n- Zosteriform lentiginous nevus\n\n\n\n## Usually congenital\n\n\n- Congenital melanocytic nevus"
+      },
+      {
+        "page": 2,
+        "text": "- These nevi are often categorized based on size, however, the lesions usually grow in proportion to the body over time, so the category may change over an individual's life. [2]  This categorization is important because large congenital melanocytic nevi are associated with an increased risk of melanoma, a serious type of skin cancer. [2]\n- Nevus of Ito\n- Nevus of Ota\n\n\nConjunctival nevus of a  32 -year-old male\n\nBecker's nevus\n\nMicrograph of an intradermal melanocytic nevus\n\nNevus of Ota\n\n\n## Decreased melanin\n\n\n## Acquired\n\n\n- Nevus anemicus\n\n\nAcquired melanocytic nevi\n\nNevus spilus\n\nCompound nevus, left buttock"
+      },
+      {
+        "page": 3,
+        "text": "# Congenital\n\n\n- Nevus depigmentosus\n\n\nNevus depigmentosus\n\nAdditional  types  of  nevi  do  not  involve  disorders  of  pigmentation  or  melanocytes.  These  additional  nevi represent hamartomatous proliferations of the epithelium, [8] connective tissue, [9] and vascular malformations. [10]\n\n\n## Epidermal nevi\n\nThese nevi represent excess growth of specific cells types found in the skin, including those that make up oil and sweat glands. [8]\n\n\n- Verrucous epidermal nevus\n- Nevus sebaceous\n- Nevus comedonicus\n- Eccrine nevus\n- Apocrine nevus\n\n\n\n## Connective tissue nevi\n\nConnective tissue nevi represent abnormalities of collagen in the dermis, the deep layer of the skin. [9]\n\n\n- Collagenoma\n- Elastoma\n\n\n\n## Vascular nevi\n\nThese nevi represent excess growth of blood vessels, including capillaries. [11]\n\n\n- Nevus simplex (nevus flammeus nuchae), also known as a stork bite or salmon patch."
+      },
+      {
+        "page": 4,
+        "text": "# Intramucosal nevi\n\nAn intramucosal nevus is a nevus within the mucosa as found in for example the mouth and genital areas. In the  mouth,  they  are  found  most  frequently  on  the  hard  palate.  They  are  typically  light  brown  and  domeshaped. [12]  Intramucosal nevi account for 64% of all reported case of oral nevi. [13]\n\n\n## Diagnosis\n\nNevi  are  typically  diagnosed  clinically  with  the  naked  eye  or  using dermatoscopy. More advanced imaging tests are available for distinguishing melanocytic nevi from melanoma, including computerized dermoscopy and image analysis. [14]  The management of nevi  depends  on  the  type  of  nevus  and  the  degree  of  diagnostic uncertainty.  Some nevi are known to be benign, and may simply be monitored over time. Others may warrant more thorough examination and biopsy for histopathological examination (looking at a sample of skin  under  a  microscope  to  detect  unique  cellular  features).  For example,  a  clinician  may  want  to  determine  whether  a  pigmented nevus is a type of melanocytic nevus, dysplastic nevus, or melanoma as some of these skin lesions pose a risk for malignancy. The ABCDE criteria (asymmetry, border irregularity, color variegation, diameter > 6  mm,  and  evolution)  are  often  used  to  distinguish  nevi  from\n\nmelanomas in adults, while modified criteria (amelanosis, bleeding or bumps, uniform color, small diameter or  de  novo,  and  evolution)  can  be  used  when  evaluating  suspicious  lesions  in  children. [15]   In  addition  to histopathological examination, some lesions may also warrant additional tests to aid in diagnosis, including special  stains,  immunohistochemistry,  and  electron  microscopy. [16]   Typically,  the  nevi  that  exist  since childhood are harmless.\n\nA dermatoscope\n\n\n## Differential diagnoses\n\nHypermelanotic nevi must be differentiated from other types of pigmented skin lesions, including: [6][7]\n\n\n- Lentigo simplex\n- Solar lentigo\n- Café au lait macule\n- Ink-spot lentigo\n- Mucosal melanotic macule\n- Mongolian spot (dermal melanocytosis)"
+      },
+      {
+        "page": 5,
+        "text": "# Management\n\nThe  management  of  a  nevus  depends  on  the  specific  diagnosis, however,  the  options  for  treatment  generally  include  the  following modalities:\n\n\n## Observation\n\n\n## Destruction\n\n\n- Chemical peels\n- Cryotherapy\n- Dermabrasion\n- Electrodessication\n- Laser ablation\n\n\n\n## Surgery\n\nThe decision to observe or treat a nevus may depend on a number of factors, including cosmetic concerns, irritative symptoms (e.g., pruritus), ulceration, infection, and concern for potential malignancy. [2]\n\n\n## Syndromes\n\n\nThe term nevus is included in the names of multiple dermatologic syndromes:\n- Basal cell nevus syndrome\n- Blue rubber bleb nevus syndrome\n- Dysplastic nevus syndrome\n- Epidermal nevus syndrome\n- Linear nevus sebaceous syndrome\n\n\n\n## See also\n\n\n- Skin lesion"
+      }
+    ]
+  }
+}
