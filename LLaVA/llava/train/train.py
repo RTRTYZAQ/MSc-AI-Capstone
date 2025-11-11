@@ -111,6 +111,9 @@ class TrainingArguments(transformers.TrainingArguments):
     mm_projector_lr: Optional[float] = None
     group_by_modality_length: bool = field(default=False)
 
+    is_peft_model: bool = False
+    peft_model_path: str = ""
+
 
 def maybe_zero_3(param, ignore_status=False, name=None):
     from deepspeed import zero
@@ -188,6 +191,20 @@ def find_all_linear_names_stage1(model):
     exclude_keywords = 'mm_projector'
     for name, module in model.named_modules():
         if exclude_keywords not in name:
+            continue
+        else:
+            if isinstance(module, cls):
+                include_module_names.append(name)
+
+    return include_module_names
+
+
+def find_all_linear_names_stage2(model):
+    cls = torch.nn.Linear
+    include_module_names = []
+    exclude_keywords = ['mm_projector', 'vision_tower', 'vision_resampler', 'lm_head']
+    for name, module in model.named_modules():
+        if any(mm_keyword in name for mm_keyword in exclude_keywords):
             continue
         else:
             if isinstance(module, cls):
@@ -872,22 +889,40 @@ def train(attn_implementation=None):
             model.get_input_embeddings().register_forward_hook(make_inputs_require_grad)
 
     if training_args.lora_enable:
-        from peft import LoraConfig, get_peft_model
-        lora_config = LoraConfig(
-            r=training_args.lora_r,
-            lora_alpha=training_args.lora_alpha,
-            target_modules=find_all_linear_names_stage1(model)[:],
-            lora_dropout=training_args.lora_dropout,
-            bias=training_args.lora_bias,
-            task_type="CAUSAL_LM",
-        )
+        if training_args.is_peft_model:
+            from peft import PeftModel
+            print('Loading exsit LoRA weights...')
+            model = PeftModel.from_pretrained(model, training_args.peft_model_path, is_trainable=False)
+
+            from peft import LoraConfig, get_peft_model
+            lora_config = LoraConfig(
+                r=training_args.lora_r,
+                lora_alpha=training_args.lora_alpha,
+                target_modules=find_all_linear_names_stage2(model)[:],
+                lora_dropout=training_args.lora_dropout,
+                bias=training_args.lora_bias,
+                task_type="CAUSAL_LM",
+            )
+            rank0_print("Adding LoRA adapters...")
+            model = get_peft_model(model, lora_config)
+        else:
+            from peft import LoraConfig, get_peft_model
+            lora_config = LoraConfig(
+                r=training_args.lora_r,
+                lora_alpha=training_args.lora_alpha,
+                target_modules=find_all_linear_names_stage1(model)[:],
+                lora_dropout=training_args.lora_dropout,
+                bias=training_args.lora_bias,
+                task_type="CAUSAL_LM",
+            )
+            rank0_print("Adding LoRA adapters...")
+            model = get_peft_model(model, lora_config)
+
         if training_args.bits == 16:
             if training_args.bf16:
                 model.to(torch.bfloat16)
             if training_args.fp16:
                 model.to(torch.float16)
-        rank0_print("Adding LoRA adapters...")
-        model = get_peft_model(model, lora_config)
 
     if 'mpt' in model_args.model_name_or_path:
         tokenizer = transformers.AutoTokenizer.from_pretrained(
@@ -971,8 +1006,10 @@ def train(attn_implementation=None):
                         module = module.to(torch.bfloat16)
     
     for name, param in model.named_parameters():
-        if 'lora' not in name:
+        if 'lora' not in name or 'mm_projector' in name:
             param.requires_grad = False
+    
+    print(model.base_model.model.base_model.model.model.mm_projector[2].lora_B.default.weight)
 
     data_module = make_supervised_data_module(tokenizer=tokenizer,
                                               data_args=data_args)

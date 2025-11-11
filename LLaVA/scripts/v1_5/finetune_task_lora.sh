@@ -2,11 +2,11 @@
 source /workspace/algorithm/Capstone/MSc-AI-Capstone/.env
 
 deepspeed /workspace/algorithm/Capstone/MSc-AI-Capstone/LLaVA/llava/train/train_mem.py \
-    --lora_enable True --lora_r 8 --lora_alpha 8 --mm_projector_lr 2e-5 \
+    --lora_enable True --lora_r 4 --lora_alpha 8 --mm_projector_lr 2e-5 \
     --deepspeed /workspace/algorithm/Capstone/MSc-AI-Capstone/LLaVA/scripts/zero2.json \
     --model_name_or_path liuhaotian/llava-v1.5-13b \
     --version v1 \
-    --data_path /workspace/algorithm/Capstone/MSc-AI-Capstone/Dataset/fine-tuning/llava_finetune_1.json \
+    --data_path /workspace/algorithm/Capstone/MSc-AI-Capstone/Dataset/fine-tuning/llava_finetune_2.json \
     --image_folder /Datasets/Dermnet/1 \
     --vision_tower openai/clip-vit-large-patch14-336 \
     --mm_projector_type mlp2x_gelu \
@@ -17,7 +17,7 @@ deepspeed /workspace/algorithm/Capstone/MSc-AI-Capstone/LLaVA/llava/train/train_
     --group_by_modality_length True \
     --bf16 False \
     --fp16 True \
-    --output_dir /Checkpoints/LLaVA/Capstone-stage1 \
+    --output_dir /Checkpoints/LLaVA/Capstone-stage2 \
     --num_train_epochs 1 \
     --per_device_train_batch_size 16 \
     --per_device_eval_batch_size 4 \
@@ -37,3 +37,5 @@ deepspeed /workspace/algorithm/Capstone/MSc-AI-Capstone/LLaVA/llava/train/train_
     --dataloader_num_workers 4 \
     --lazy_preprocess True \
     --report_to wandb \
+    --is_peft_model True \
+    --peft_model_path /Checkpoints/LLaVA/Capstone-stage1

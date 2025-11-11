@@ -23,7 +23,7 @@ from llava.model import *
 from llava.constants import DEFAULT_IMAGE_PATCH_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN
 
 
-def load_pretrained_model(model_path, model_base, model_name, load_8bit=False, load_4bit=False, device_map="auto", device="cuda", use_flash_attn=False, **kwargs):
+def load_pretrained_model(model_path2, model_path1, model_base, model_name, load_8bit=False, load_4bit=False, device_map="auto", device="cuda", use_flash_attn=False, **kwargs):
     kwargs = {"device_map": device_map, **kwargs}
 
     if device != "cuda":
@@ -51,7 +51,7 @@ def load_pretrained_model(model_path, model_base, model_name, load_8bit=False, l
             warnings.warn('There is `lora` in model name but no `model_base` is provided. If you are loading a LoRA model, please provide the `model_base` argument. Detailed instruction: https://github.com/haotian-liu/LLaVA#launch-a-model-worker-lora-weights-unmerged.')
         if 'lora' in model_name.lower() and model_base is not None:
             from llava.model.language_model.llava_llama import LlavaConfig
-            lora_cfg_pretrained = LlavaConfig.from_pretrained(model_path)
+            lora_cfg_pretrained = LlavaConfig.from_pretrained(model_path2)
             tokenizer = AutoTokenizer.from_pretrained(model_base, use_fast=False)
             print('Loading LLaVA from base model...')
             model = LlavaLlamaForCausalLM.from_pretrained(model_base, low_cpu_mem_usage=True, config=lora_cfg_pretrained, **kwargs)
@@ -61,8 +61,8 @@ def load_pretrained_model(model_path, model_base, model_name, load_8bit=False, l
                 model.model.embed_tokens.weight = torch.nn.Parameter(torch.empty(token_num, tokem_dim, device=model.device, dtype=model.dtype))
 
             print('Loading additional LLaVA weights...')
-            if os.path.exists(os.path.join(model_path, 'non_lora_trainables.bin')):
-                non_lora_trainables = torch.load(os.path.join(model_path, 'non_lora_trainables.bin'), map_location='cpu')
+            if os.path.exists(os.path.join(model_path2, 'non_lora_trainables.bin')):
+                non_lora_trainables = torch.load(os.path.join(model_path2, 'non_lora_trainables.bin'), map_location='cpu')
             else:
                 # this is probably from HF Hub
                 from huggingface_hub import hf_hub_download
@@ -72,7 +72,7 @@ def load_pretrained_model(model_path, model_base, model_name, load_8bit=False, l
                         filename=filename,
                         subfolder=subfolder)
                     return torch.load(cache_file, map_location='cpu')
-                non_lora_trainables = load_from_hf(model_path, 'non_lora_trainables.bin')
+                non_lora_trainables = load_from_hf(model_path2, 'non_lora_trainables.bin')
             non_lora_trainables = {(k[11:] if k.startswith('base_model.') else k): v for k, v in non_lora_trainables.items()}
             if any(k.startswith('model.model.') for k in non_lora_trainables):
                 non_lora_trainables = {(k[6:] if k.startswith('model.') else k): v for k, v in non_lora_trainables.items()}
@@ -80,7 +80,14 @@ def load_pretrained_model(model_path, model_base, model_name, load_8bit=False, l
 
             from peft import PeftModel
             print('Loading LoRA weights...')
-            model = PeftModel.from_pretrained(model, model_path)
+            model = PeftModel.from_pretrained(model, model_path1)
+            print('Loading LoRA weights...')
+            model = PeftModel.from_pretrained(model, model_path2)
+
+            print(model.base_model.model.base_model.model.model.mm_projector[2].lora_B.default.weight)
+
+            print(model.base_model.model.base_model.model.model.layers[10].self_attn.q_proj.lora_B.default.weight)
+
             print('Merging LoRA weights...')
             model = model.merge_and_unload()
             print('Model is loaded...')
