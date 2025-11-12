@@ -3,12 +3,13 @@ import os
 import tempfile
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
-os.environ.setdefault("HF_HUB_ENABLE_HF_TRANSFER", "1")
-### 这里用了国内镜像，不需要的话可以注释掉
-hf_endpoint = os.environ.get("HF_ENDPOINT", "https://hf-mirror.com")
-os.environ.setdefault("HF_ENDPOINT", hf_endpoint)
-os.environ.setdefault("TRANSFORMERS_VERBOSITY", "error")
+# os.environ.setdefault("HF_HUB_ENABLE_HF_TRANSFER", "1")
+# ### 这里用了国内镜像，不需要的话可以注释掉
+# hf_endpoint = os.environ.get("HF_ENDPOINT", "https://hf-mirror.com")
+# os.environ.setdefault("HF_ENDPOINT", hf_endpoint)
+# os.environ.setdefault("TRANSFORMERS_VERBOSITY", "error")
 
+import requests
 import gradio as gr
 import torch
 from PIL import Image
@@ -45,7 +46,7 @@ class SkinDiagnosisSystem:
     def _load_model(self):
         """Load the trained EfficientNetV2 model"""
         try:
-            model_dir = "models\EfficientNetV2-M_20250911_224153"
+            model_dir = "/RAG"
             model_path = os.path.join(model_dir, 'best_model_efficientnet_v2.pth')
             
             self.model = EfficientNetV2Classifier(num_classes=23)
@@ -243,6 +244,7 @@ class SkinDiagnosisSystem:
             
         except Exception as e:
             raise Exception(f"Error during prediction: {str(e)}")
+
     
     def generate_diagnosis_report(self, image_path: str, predictions: List[Dict]) -> str:
         """Generate diagnosis report using Qwen-VL"""
@@ -273,20 +275,41 @@ class SkinDiagnosisSystem:
                     ]
                 }
             ]
+
+            message = payload = {
+                "model": "llava-xxx",
+                "messages": [
+                    {
+                    "role": "user",
+                    "content": [
+                        {"image": image_path},
+                        {"text": system_prompt}
+                    ]
+                    }
+                ],
+                "top_p": 0.9,
+                "temperature": 1.0
+            }
             ### 调用模型，这里的messages只是一种传参方法，可以单独传下面两个变量
             ### image_path=messages[0]['content'][0]['image']
             ### prompt=messages[0]['content'][1]['text']
-            response = MultiModalConversation.call(
-                model='qwen-vl-max',
-                messages=messages,
-                top_p=0.8,
-                temperature=0.7
-            )
+            # response = MultiModalConversation.call(
+            #     model='qwen-vl-max',
+            #     messages=messages,
+            #     top_p=0.8,
+            #     temperature=0.7
+            # )
+
+            url = "http://0.0.0.0:8000/multimodal/conversation"
+
+            response = requests.post(url, json=payload, timeout=120).json()["output"]["choices"][0]["message"]["content"]
+
+            print(response)
             
-            formatted_response = self._format_ai_response(response.output.choices[0].message.content)
-            formatted_response = formatted_response.removeprefix("```json").removesuffix("```").strip()
+            # formatted_response = self._format_ai_response(response.output.choices[0].message.content)
+            # formatted_response = formatted_response.removeprefix("```json").removesuffix("```").strip()
             try:
-                json_report = json.loads(formatted_response)
+                json_report = json.loads(response)
                 return self._json_report_to_markdown(json_report)
             except json.JSONDecodeError:
                 return formatted_response
