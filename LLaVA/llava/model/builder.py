@@ -81,12 +81,12 @@ def load_pretrained_model(model_path2, model_path1, model_base, model_name, load
             from peft import PeftModel
             print('Loading LoRA weights...')
             model = PeftModel.from_pretrained(model, model_path1)
-            print('Loading LoRA weights...')
+            # print('Loading LoRA weights...')
             model = PeftModel.from_pretrained(model, model_path2)
 
-            print(model.base_model.model.base_model.model.model.mm_projector[2].lora_B.default.weight)
+            # print(model.base_model.model.base_model.model.model.mm_projector[2].lora_B.default.weight)
 
-            print(model.base_model.model.base_model.model.model.layers[10].self_attn.q_proj.lora_B.default.weight)
+            # print(model.base_model.model.base_model.model.model.layers[10].self_attn.q_proj.lora_B.default.weight)
 
             print('Merging LoRA weights...')
             model = model.merge_and_unload()
